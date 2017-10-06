@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+<title>BusRio</title>
+	<link href="static/style.css" rel="stylesheet">
+		<meta name="robots" content="noindex,follow" />
+</head>
+<body>
+	<ul class="nav">
+		<li id="settings">
+			<img src="static/settings2.png"/>
+		</li>
+		<li>
+			<a href="#">RioBus</a>
+		</li>
+		<li>
+			<a href="#">Sobre</a>
+		</li>
+		<li id="search">
+			<form action="" method="get">
+				<input id="search_text" maxlength="4" size="4" value="" name="number" placeholder="Digite aqui o n&uacute;mero do &ocirc;nibus"/>
+				<input type="button" name="search_button" id="search_button" type="submit"></a>
+			</form>
+		</li>	
+	</ul>
+	
+<script>
+function testResults (form) {
+    var TestVar = form.search_text.value;
+    alert ("You typed: " + TestVar);
+}
+</script>
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat: -22.9053516, lng: -43.1956282},
+          zoom: 11
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: -22.9053516, lng: -43.1956282},
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN69JFgFynsUNnSR3kryVDKzzDLvbkfy0&callback=initMap">
+    </script>
+</body>
+
+</html>
